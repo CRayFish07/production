@@ -12,6 +12,8 @@ public interface IDgu2000DAO {
 	
 	Integer updateDgu2000(Dgu2000 dgu2000);
 	
+	Integer deleteDgu2000ById(int id);
+	
 	List<Dgu2000> getAllDgu2000();
 	
 	List<Dgu2000> getDgu2000ByFengchang(String fengchang);

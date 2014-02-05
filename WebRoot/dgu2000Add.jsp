@@ -14,10 +14,13 @@
   
   <body>
     <center>
-    	<h1>添加新用户</h1>
-    	<s:form action="user_add" namespace="/user" method="post">
-    		<s:textfield label="用户名" name="user.username"></s:textfield>
-    		<s:password label="密码" name="user.password"></s:password>
+    	<h1>添加采集器</h1>
+    	<s:form action="dgu2000_add" namespace="/" method="post">
+    		<s:textfield label="采集器id" name="dgu2000.id"></s:textfield>
+    		<s:textfield label="采集器ip" name="dgu2000.ip" value="192.168.0."></s:textfield>
+    		<s:textfield label="项目名称" name="dgu2000.xiangmuName"></s:textfield>
+    		<s:textfield label="风场名称" name="dgu2000.fengchang"></s:textfield>
+    		<s:textfield label="地址" name="dgu2000.address"></s:textfield>
     		<s:submit value="提交"></s:submit>
     	</s:form>
     </center>

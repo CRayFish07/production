@@ -14,11 +14,13 @@
   
   <body>
     <center>
-    	<h1>修改用户</h1>
+    	<h1>修改采集器</h1>
     	<s:form action="dgu2000_update" namespace="/" method="post">
     		<s:hidden name="dgu2000.id"></s:hidden>
     		<s:textfield label="ip" name="dgu2000.ip"></s:textfield>
-    		<s:textfield label="风场" name="dgu2000.fengchang"></s:textfield>
+    		<s:textfield label="项目名称" name="dgu2000.xiangmuName"></s:textfield>
+    		<s:textfield label="风场名称" name="dgu2000.fengchang"></s:textfield>
+    		<s:textfield label="地址" name="dgu2000.address"></s:textfield>
     		<s:submit value="提交"></s:submit>
     	</s:form>
     </center>

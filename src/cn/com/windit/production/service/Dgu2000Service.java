@@ -13,16 +13,26 @@ public class Dgu2000Service implements IDgu2000Service {
 	public Dgu2000 getDgu2000ById(int id) {
 		return dgu2000DAO.getDgu2000ById(id);
 	}
-
+	
 	@Override
-	public List<Dgu2000> getAllDgu2000() {
-		return dgu2000DAO.getAllDgu2000();
+	public Integer insertDgu2000(Dgu2000 dgu2000) {
+		return dgu2000DAO.insertDgu2000(dgu2000);
 	}
 	
 	@Override
 	public Integer updateDgu2000(Dgu2000 dgu2000) {
 		return dgu2000DAO.updateDgu2000(dgu2000);
 		
+	}
+	
+	@Override
+	public Integer deleteDgu2000ById(int id) {
+		return dgu2000DAO.deleteDgu2000ById(id);
+	}
+	
+	@Override
+	public List<Dgu2000> getAllDgu2000() {
+		return dgu2000DAO.getAllDgu2000();
 	}
 
 	@Override
@@ -38,6 +48,10 @@ public class Dgu2000Service implements IDgu2000Service {
 	public void setDgu2000DAO(IDgu2000DAO dgu2000dao) {
 		dgu2000DAO = dgu2000dao;
 	}
+
+	
+
+	
 
 	
 	

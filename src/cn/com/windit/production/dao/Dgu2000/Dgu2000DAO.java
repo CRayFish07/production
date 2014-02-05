@@ -19,8 +19,7 @@ public class Dgu2000DAO implements IDgu2000DAO {
 
 	@Override
 	public Integer insertDgu2000(Dgu2000 dgu2000) {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSessionTemplate.insert("insertDgu2000", dgu2000);
 	}
 
 	@Override
@@ -43,6 +42,11 @@ public class Dgu2000DAO implements IDgu2000DAO {
 	@Override
 	public Integer updateDgu2000(Dgu2000 dgu2000) {
 		return sqlSessionTemplate.update("updateDgu2000", dgu2000);
+	}
+
+	@Override
+	public Integer deleteDgu2000ById(int id) {
+		return sqlSessionTemplate.delete("deleteDgu2000ById", id);
 	}
 
 }
