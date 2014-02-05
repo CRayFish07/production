@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.windit.production.dao.Dgu2000.IDgu2000DAO">
+    <resultMap id="Dgu2000Map" type="cn.com.windit.production.pojo.Dgu2000">
+        <!--id映射 -->
+        <id property="id" column="id" />
+        <!--普通属性映射 -->
+        <result property="ip" column="ip" />
+        <result property="fengchang" column="fengchang" />
+        <result property="xiangmuName" column="xiangmuName" />
+        <result property="address" column="address" />
+        <result property="dateTime" column="dateTime" />
+    </resultMap>
+
+    <select id="getDgu2000ById" parameterType="int" resultMap="Dgu2000Map">
+        select * from Dgu2000 where id = #{id}
+    </select>
+    
+    <insert id="insertDgu2000" parameterType="cn.com.windit.production.pojo.Dgu2000">
+    	insert into Dgu2000(id, ip, fengchang, xiangmuName, address, dateTime) 
+    	values(#{id}, #{ip}, #{fengchang}, #{xiangmuName}, #{address}, #{dateTime})
+    </insert>
+    
+    <update id="updateDgu2000" parameterType="cn.com.windit.production.pojo.Dgu2000">
+    	update dgu2000 set ip = #{ip}, fengchang = #{fengchang} 
+    		where id = #{id}
+    </update>
+    
+    <select id="getAllDgu2000" resultMap="Dgu2000Map">
+        select * from Dgu2000 
+    </select>
+    
+    <select id="getDgu2000ByFengchang" parameterType="String" resultMap="Dgu2000Map">
+        select * from Dgu2000 where fengchang = #{fengchang}
+    </select>
+    
+    <select id="getDgu2000ByXiangmuName" parameterType="String" resultMap="Dgu2000Map">
+        select * from Dgu2000 where xiangmuName = #{xiangmuName}
+    </select>
+    
+</mapper>
