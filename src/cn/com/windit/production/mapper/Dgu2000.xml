@@ -50,10 +50,10 @@
 		select * from Dgu2000
 		<where>
 			<if test="fengchang!=null"> 
-				fengchang like CONCAT('%', '${fengchang}', '%')
+				fengchang like CONCAT('%', #{fengchang}, '%')
 			</if>
 			<if test="xiangmuName!=null"> 
-				and xiangmuName like CONCAT('%', '${xiangmuName}', '%')
+				and xiangmuName like CONCAT('%', #{xiangmuName}, '%')
 			</if>
 			<if test="startTime!=null and endTime!=null"> 
 				and ( addTime between #{startTime} and #{endTime} )
