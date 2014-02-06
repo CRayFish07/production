@@ -1,6 +1,7 @@
 package cn.com.windit.production.service;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.com.windit.production.dao.Dgu2000.IDgu2000DAO;
 import cn.com.windit.production.pojo.Dgu2000;
@@ -34,6 +35,12 @@ public class Dgu2000Service implements IDgu2000Service {
 	public List<Dgu2000> getAllDgu2000() {
 		return dgu2000DAO.getAllDgu2000();
 	}
+	
+	@Override
+	public List<Dgu2000> getDgu2000ByMap(Map<String, Object> map) {
+		return dgu2000DAO.getDgu2000ByMap(map);
+	}
+
 
 	@Override
 	public List<Dgu2000> getDgu2000sByXiangmuName(String xiangmu) {
@@ -49,6 +56,7 @@ public class Dgu2000Service implements IDgu2000Service {
 		dgu2000DAO = dgu2000dao;
 	}
 
+	
 	
 
 	

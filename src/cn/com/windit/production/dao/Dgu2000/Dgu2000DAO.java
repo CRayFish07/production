@@ -1,6 +1,7 @@
 package cn.com.windit.production.dao.Dgu2000;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,11 @@ public class Dgu2000DAO implements IDgu2000DAO {
 	@Override
 	public Integer deleteDgu2000ById(int id) {
 		return sqlSessionTemplate.delete("deleteDgu2000ById", id);
+	}
+
+	@Override
+	public List<Dgu2000> getDgu2000ByMap(Map<String, Object> map) {
+		return sqlSessionTemplate.selectList("getDgu2000ByMap", map);
 	}
 
 }

@@ -7,7 +7,7 @@
 	<!-- 当struts配置文件修改时是否自动加载 -->
 	<constant name="struts.devMode" value="true" />
 	<!-- 开发模式下打印详细的错误信息 -->
-	<constant name="struts.ui.theme" value="xhtml" />
+	<constant name="struts.ui.theme" value="simple" />
 
 	<package name="dgu2000" namespace="/" extends="struts-default">
 		<action name="dgu2000_*" class="cn.com.windit.production.action.Dgu2000Action" method="{1}">
